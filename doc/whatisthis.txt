@@ -1,0 +1,5 @@
+pgdiff aims to be a utility to show you differences between two database schemas.
+It should help you mainly when doing upgrades of your application when your schema is filled with data.
+It should automagicaly detect all the changes and issue appropriate CREATEs, DROPs and ALTERs to have your schema altered.
+It should probably be named something else than pgdiff.
+
