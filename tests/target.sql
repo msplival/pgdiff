@@ -7,6 +7,14 @@ CREATE TABLE table_one (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE table_two (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 INSERT INTO table_one (id, name, age, created_at) VALUES
     (1, 'Alice', 30, '2023-01-01 10:00:00'),
     (2, 'Bob', 25, '2023-01-02 11:00:00'),
