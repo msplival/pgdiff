@@ -35,17 +35,19 @@ def compare_schemas(conn1, conn2):
 def read_db_config(filename):
     config = configparser.ConfigParser()
     config.read(filename)
-    return {
+    db_config = {
         'dbname': config['database']['dbname'],
         'user': config['database']['user'],
-        'password': config['database']['password'],
         'host': config['database']['host'],
         'port': config['database']['port']
     }
+    if 'password' in config['database']:
+        db_config['password'] = config['database']['password']
+    return db_config
 
 if __name__ == "__main__":
-    source_config = read_db_config('/path/to/source_config.ini')
-    target_config = read_db_config('/path/to/target_config.ini')
+    source_config = read_db_config('source.ini')
+    target_config = read_db_config('target.ini')
 
     conn1 = psycopg2.connect(**source_config)
     conn2 = psycopg2.connect(**target_config)
