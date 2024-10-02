@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS table_one;
+
 CREATE TABLE table_one (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
@@ -16,4 +18,3 @@ INSERT INTO table_one (id, name, age, created_at) VALUES
     (8, 'Hank', 33, '2023-01-08 17:00:00'),
     (9, 'Ivy', 29, '2023-01-09 18:00:00'),
     (10, 'Jack', 31, '2023-01-10 19:00:00');
-);
