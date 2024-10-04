@@ -1,7 +1,7 @@
 import psycopg2
 import os
 import subprocess
-from .db_utils import DBUtils
+from db_utils import DBUtils
 
 class PostgresUtils(DBUtils):
     def __init__(self, config):
